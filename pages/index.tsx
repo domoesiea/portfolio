@@ -2,12 +2,13 @@
 
 const MotionDiv = motion.div as React.FC<React.HTMLAttributes<HTMLDivElement> & any>;
 
-const MotionLink = motion<HTMLAnchorElement>;
+
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
+const MotionLink = motion<HTMLAnchorElement>;
 import { Github, Linkedin, Download } from "lucide-react";
 
 export default function ProjectGallery() {
@@ -125,7 +126,7 @@ export default function ProjectGallery() {
         {/* Liens réseaux */}
         <div className="flex justify-center gap-8 mt-4">
         
-        <MotionLink
+          <MotionLink
           href="https://github.com/mon-github"
           target="_blank"
           className="flex flex-col items-center text-muted-foreground hover:text-black"
