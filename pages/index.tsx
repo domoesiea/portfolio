@@ -8,7 +8,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-const MotionLink = motion<HTMLAnchorElement>;
+import type { ComponentPropsWithoutRef } from "react";
+const MotionLink = motion<ComponentPropsWithoutRef<"a">>("a");
 import { Github, Linkedin, Download } from "lucide-react";
 
 export default function ProjectGallery() {
@@ -135,24 +136,26 @@ export default function ProjectGallery() {
           <Github size={40} />
           <span className="mt-1">GitHub</span>
           </MotionLink>
-          <motion.a
-            whileHover={{ scale: 1.2 }}
+          <MotionLink
             href="https://www.linkedin.com/in/mon-linkedin"
             target="_blank"
             className="flex flex-col items-center text-muted-foreground hover:text-blue-700"
-          >
+            whileHover={{ scale: 1.2 }}
+            >
             <Linkedin size={40} />
-            <span className="mt-1">LinkedIn</span>
-          </motion.a>
+                    <span className="mt-1">LinkedIn</span>
+          </MotionLink>
         </div>
 
         {/* Compétences */}
         <h2 className="text-3xl font-bold mt-12 mb-4">Compétences</h2>
-        <motion.div
-          className="flex flex-wrap justify-center gap-3"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
+        
+
+        <MotionDiv
+        className="flex flex-wrap justify-center gap-3"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
         >
           <Badge className="bg-green-100 text-green-800">Python</Badge>
           <Badge className="bg-green-100 text-green-800">Pandas</Badge>
@@ -162,8 +165,8 @@ export default function ProjectGallery() {
           <Badge className="bg-green-100 text-green-800">Machine Learning</Badge>
           <Badge className="bg-green-100 text-green-800">Git</Badge>
           <Badge className="bg-green-100 text-green-800">Jupyter</Badge>
-        </motion.div>
-      </motion.div>
+        </MotionDiv>
+      </MotionDiv>
     </div>
   );
 }
