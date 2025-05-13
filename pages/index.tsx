@@ -2,6 +2,8 @@
 
 const MotionDiv = motion.div as React.FC<React.HTMLAttributes<HTMLDivElement> & any>;
 
+const MotionLink = motion<HTMLAnchorElement>;
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -122,15 +124,16 @@ export default function ProjectGallery() {
 
         {/* Liens réseaux */}
         <div className="flex justify-center gap-8 mt-4">
-          <motion.a
-            whileHover={{ scale: 1.2 }}
-            href="https://github.com/mon-github"
-            target="_blank"
-            className="flex flex-col items-center text-muted-foreground hover:text-black"
+        
+        <MotionLink
+          href="https://github.com/mon-github"
+          target="_blank"
+          className="flex flex-col items-center text-muted-foreground hover:text-black"
+          whileHover={{ scale: 1.2 }}
           >
-            <Github size={40} />
-            <span className="mt-1">GitHub</span>
-          </motion.a>
+          <Github size={40} />
+          <span className="mt-1">GitHub</span>
+          </MotionLink>
           <motion.a
             whileHover={{ scale: 1.2 }}
             href="https://www.linkedin.com/in/mon-linkedin"
