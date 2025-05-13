@@ -100,11 +100,6 @@ export default function ProjectGallery() {
         className="col-span-1 md:col-span-2 mt-12 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-      ></MotionDiv>
-      <motion.div
-        className="col-span-1 md:col-span-2 mt-12 text-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
       >
         <h2 className="text-3xl font-bold mb-4">À propos de moi</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto mb-4">
