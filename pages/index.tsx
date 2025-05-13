@@ -76,12 +76,12 @@ export default function ProjectGallery() {
         </Card>
 
         <div className="flex gap-4 mb-6">
-          <Button asChild>
+          <Button asChild  className="">
             <a href="#" target="_blank">
               📊 Voir le Notebook
             </a>
           </Button>
-          <Button variant="secondary" asChild>
+          <Button variant="secondary" asChild  className="">
             <a href="#" target="_blank">
               📝 Lire le Rapport
             </a>
@@ -105,13 +105,13 @@ export default function ProjectGallery() {
         </p>
 
         <div className="flex justify-center gap-4 mb-4">
-          <Button asChild>
+          <Button asChild  className="">
             <a href="mailto:mon.email@example.com">📧 Me Contacter</a>
           </Button>
-          <Button variant="secondary" asChild>
+          <Button variant="secondary" asChild  className="">
             <a href="/mon-cv.pdf" target="_blank">📄 Voir mon CV</a>
           </Button>
-          <Button variant="outline" asChild>
+          <Button variant="outline" asChild  className="">
             <a href="/mon-portfolio.pdf" target="_blank">
               <Download className="mr-2" /> Télécharger le Portfolio (PDF)
             </a>
