@@ -7,12 +7,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { MotionDiv, MotionLink } from "@/components/motion";
+
 import { motion } from "framer-motion";
 import React from "react";
 import type { ComponentPropsWithoutRef } from "react";
-const MotionLink = motion<ComponentPropsWithoutRef<"a">>("a");
 
-const MotionDiv = motion.div as React.ComponentType<React.HTMLAttributes<HTMLDivElement> & any>;
 import { Github, Linkedin, Download } from "lucide-react";
 
 export default function ProjectGallery() {
