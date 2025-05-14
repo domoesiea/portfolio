@@ -1,6 +1,6 @@
 "use client";
 
-const MotionDiv = motion.div as React.FC<React.HTMLAttributes<HTMLDivElement> & any>;
+
 
 
 
@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import type { ComponentPropsWithoutRef } from "react";
 const MotionLink = motion<ComponentPropsWithoutRef<"a">>("a");
+const MotionDiv = motion.div as React.FC<React.HTMLAttributes<HTMLDivElement> & any>;
 import { Github, Linkedin, Download } from "lucide-react";
 
 export default function ProjectGallery() {
