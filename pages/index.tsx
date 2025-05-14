@@ -16,7 +16,7 @@ export default function ProjectGallery() {
   return (
     <div className="max-w-5xl mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-blue-900 bg-blue-50 rounded-2xl shadow-lg">
       {/* Projet 1 */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+      <MotionDiv initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <h1 className="text-2xl font-bold mb-2">Prédiction des ventes (2024)</h1>
         <p className="text-muted-foreground mb-4">
           Projet académique réalisé dans le cadre du cours <strong>Machine Learning Appliqué</strong>. L'objectif était de prédire les ventes à partir de données historiques.
@@ -55,10 +55,10 @@ export default function ProjectGallery() {
         <p>
           <strong>Résultat :</strong> Précision de 90 % grâce à la validation croisée. Utilisation de la régression linéaire et de la sélection de features.
         </p>
-      </motion.div>
+      </MotionDiv>
 
       {/* Projet 2 */}
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+      <MotionDiv initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <h1 className="text-2xl font-bold mb-2">Analyse des données COVID-19 (2023)</h1>
         <p className="text-muted-foreground mb-4">
           Projet réalisé pour le cours <strong>Data Visualisation</strong>, avec création de dashboards interactifs sur l'évolution de la pandémie.
@@ -97,7 +97,7 @@ export default function ProjectGallery() {
         <p>
           <strong>Résultat :</strong> Création de visualisations interactives avec filtrage par pays et période. Présenté lors d'une soutenance finale.
         </p>
-      </motion.div>
+      </MotionDiv>
 
       {/* À propos de moi */}
       <MotionDiv
