@@ -40,7 +40,7 @@ export default function ProjectGallery() {
         </Card>
 
         <div className="flex gap-4 mb-6">
-          <Button asChild className="">
+          <Button asChild className="flex gap-4 mb-6">
             <a href="#" target="_blank">
               📊 Voir le Notebook
             </a>
@@ -82,7 +82,7 @@ export default function ProjectGallery() {
         </Card>
 
         <div className="flex gap-4 mb-6">
-          <Button asChild  className="">
+          <Button asChild  className=" ">
             <a href="#" target="_blank">
               📊 Voir le Notebook
             </a>
