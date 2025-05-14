@@ -11,8 +11,8 @@ import { motion } from "framer-motion";
 import React from "react";
 import type { ComponentPropsWithoutRef } from "react";
 const MotionLink = motion<ComponentPropsWithoutRef<"a">>("a");
-const MotionDiv = motion.div as React.FC<React.HTMLAttributes<HTMLDivElement> & any>;
 
+const MotionDiv = motion.div as React.ComponentType<React.HTMLAttributes<HTMLDivElement> & any>;
 import { Github, Linkedin, Download } from "lucide-react";
 
 export default function ProjectGallery() {
