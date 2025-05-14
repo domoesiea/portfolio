@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import * as React from "react";
 
-export function Button({ className, variant = "default", asChild, ...props }) {
+export function Button({ className="", variant = "default", asChild, ...props }) {
   const Comp = asChild ? "a" : "button";
   return (
     <Comp

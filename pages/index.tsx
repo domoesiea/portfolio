@@ -40,7 +40,7 @@ export default function ProjectGallery() {
         </Card>
 
         <div className="flex gap-4 mb-6">
-          <Button asChild className="flex gap-4 mb-6">
+          <Button asChild className="px-4 py-2">
             <a href="#" target="_blank">
               📊 Voir le Notebook
             </a>
