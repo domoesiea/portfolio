@@ -105,7 +105,7 @@ export default function ProjectGallery() {
 
       {/* À propos de moi */}
       <MotionDiv
-        className="col-span-1 md:col-span-2 mt-12 text-center"
+        
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
