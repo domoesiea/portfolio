@@ -9,6 +9,10 @@ const MotionDiv = motion.div as React.ComponentType<
   HTMLAttributes<HTMLDivElement> & MotionProps
 >;
 
+const MotionLink = motion.a as React.ComponentType<
+  React.AnchorHTMLAttributes<HTMLAnchorElement> & MotionProps
+>;
+
 export default function ProjectGallery() {
   return (
     <div className="max-w-5xl mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-blue-900 bg-blue-50 rounded-2xl shadow-lg">
@@ -123,16 +127,17 @@ export default function ProjectGallery() {
 
         {/* Liens réseaux */}
         <div className="flex justify-center gap-8 mt-4">
-          <motion.a
-            whileHover={{ scale: 1.2 }}
-            href="https://github.com/mon-github"
-            target="_blank"
-            className="flex flex-col items-center text-muted-foreground hover:text-black"
-          >
-            <Github size={40} />
-            <span className="mt-1">GitHub</span>
-          </motion.a>
-          <motion.a
+        <MotionLink
+          whileHover={{ scale: 1.2 }}
+          href="https://github.com/mon-github"
+          target="_blank"
+          className="flex flex-col items-center text-muted-foreground hover:text-black"
+        >
+          <Github size={40} />
+          <span className="mt-1">GitHub</span>
+        </MotionLink>
+          
+          <MotionLink
             whileHover={{ scale: 1.2 }}
             href="https://www.linkedin.com/in/mon-linkedin"
             target="_blank"
@@ -140,7 +145,7 @@ export default function ProjectGallery() {
           >
             <Linkedin size={40} />
             <span className="mt-1">LinkedIn</span>
-          </motion.a>
+          </MotionLink>
         </div>
 
         {/* Compétences */}
