@@ -1,12 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { motion } from "framer-motion";
+import { motion, MotionProps } from "framer-motion";
 import { Github, Linkedin, Download } from "lucide-react";
-import React from "react";
+import React, { HTMLAttributes } from "react";
 
 const MotionDiv = motion.div as React.ComponentType<
-  React.HTMLAttributes<HTMLDivElement> & { children?: React.ReactNode }
+  HTMLAttributes<HTMLDivElement> & MotionProps
 >;
 
 export default function ProjectGallery() {
