@@ -1,23 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { motion, MotionProps } from "framer-motion";
+import { motion } from "framer-motion";
 import { Github, Linkedin, Download } from "lucide-react";
-import React, { HTMLAttributes } from "react";
-
-const MotionDiv = motion.div as React.ComponentType<
-  HTMLAttributes<HTMLDivElement> & MotionProps
->;
-
-const MotionLink = motion.a as React.ComponentType<
-  React.AnchorHTMLAttributes<HTMLAnchorElement> & MotionProps
->;
+import React from "react";
 
 export default function ProjectGallery() {
   return (
     <div className="max-w-5xl mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-blue-900 bg-blue-50 rounded-2xl shadow-lg">
       {/* Projet 1 */}
-      <MotionDiv initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <h1 className="text-2xl font-bold mb-2">Prédiction des ventes (2024)</h1>
         <p className="text-muted-foreground mb-4">
           Projet académique réalisé dans le cadre du cours <strong>Machine Learning Appliqué</strong>. L'objectif était de prédire les ventes à partir de données historiques.
@@ -42,24 +34,20 @@ export default function ProjectGallery() {
 
         <div className="flex gap-4 mb-6">
           <Button asChild>
-            <a href="#" target="_blank">
-              📊 Voir le Notebook
-            </a>
+            <a href="#" target="_blank">📊 Voir le Notebook</a>
           </Button>
           <Button variant="secondary" asChild>
-            <a href="#" target="_blank">
-              🗘️ Lire le Rapport
-            </a>
+            <a href="#" target="_blank">📝 Lire le Rapport</a>
           </Button>
         </div>
 
         <p>
           <strong>Résultat :</strong> Précision de 90 % grâce à la validation croisée. Utilisation de la régression linéaire et de la sélection de features.
         </p>
-      </MotionDiv>
+      </motion.div>
 
       {/* Projet 2 */}
-      <MotionDiv initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <h1 className="text-2xl font-bold mb-2">Analyse des données COVID-19 (2023)</h1>
         <p className="text-muted-foreground mb-4">
           Projet réalisé pour le cours <strong>Data Visualisation</strong>, avec création de dashboards interactifs sur l'évolution de la pandémie.
@@ -84,25 +72,21 @@ export default function ProjectGallery() {
 
         <div className="flex gap-4 mb-6">
           <Button asChild>
-            <a href="#" target="_blank">
-              📊 Voir le Notebook
-            </a>
+            <a href="#" target="_blank">📊 Voir le Notebook</a>
           </Button>
           <Button variant="secondary" asChild>
-            <a href="#" target="_blank">
-              🗘️ Lire le Rapport
-            </a>
+            <a href="#" target="_blank">📝 Lire le Rapport</a>
           </Button>
         </div>
 
         <p>
           <strong>Résultat :</strong> Création de visualisations interactives avec filtrage par pays et période. Présenté lors d'une soutenance finale.
         </p>
-      </MotionDiv>
+      </motion.div>
 
       {/* À propos de moi */}
-      <MotionDiv
-        className="col-span-1 md:col-span-2 mt-12 text-center"
+      <motion.div
+        
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -127,31 +111,29 @@ export default function ProjectGallery() {
 
         {/* Liens réseaux */}
         <div className="flex justify-center gap-8 mt-4">
-        <MotionLink
-          whileHover={{ scale: 1.2 }}
-          href="https://github.com/mon-github"
-          target="_blank"
-          className="flex flex-col items-center text-muted-foreground hover:text-black"
-        >
-          <Github size={40} />
-          <span className="mt-1">GitHub</span>
-        </MotionLink>
-          
-          <MotionLink
+          <motion.a
             whileHover={{ scale: 1.2 }}
-            href="https://www.linkedin.com/in/mon-linkedin"
-            target="_blank"
-            className="flex flex-col items-center text-muted-foreground hover:text-blue-700"
+            
+          >
+            <Github size={40} />
+            <span className="mt-1">GitHub</span>
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            
+            
+            
           >
             <Linkedin size={40} />
             <span className="mt-1">LinkedIn</span>
-          </MotionLink>
+          </motion.a>
         </div>
 
         {/* Compétences */}
         <h2 className="text-3xl font-bold mt-12 mb-4">Compétences</h2>
-        <MotionDiv
-          className="flex flex-wrap justify-center gap-3"
+        <motion.div
+          
+          
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
@@ -164,8 +146,8 @@ export default function ProjectGallery() {
           <Badge className="bg-green-100 text-green-800">Machine Learning</Badge>
           <Badge className="bg-green-100 text-green-800">Git</Badge>
           <Badge className="bg-green-100 text-green-800">Jupyter</Badge>
-        </MotionDiv>
-      </MotionDiv>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
