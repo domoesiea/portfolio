@@ -1,20 +1,13 @@
-"use client";
-
-
-
-
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-
 import { motion } from "framer-motion";
-import React from "react";
-import type { ComponentPropsWithoutRef } from "react";
-const MotionLink = motion<ComponentPropsWithoutRef<"a">>("a");
-
-const MotionDiv = motion.div as React.ComponentType<React.HTMLAttributes<HTMLDivElement> & any>;
 import { Github, Linkedin, Download } from "lucide-react";
+import React from "react";
+
+const MotionDiv = motion.div as React.ComponentType<
+  React.HTMLAttributes<HTMLDivElement> & { children?: React.ReactNode }
+>;
 
 export default function ProjectGallery() {
   return (
@@ -44,14 +37,14 @@ export default function ProjectGallery() {
         </Card>
 
         <div className="flex gap-4 mb-6">
-          <Button asChild className="px-4 py-2">
+          <Button asChild>
             <a href="#" target="_blank">
               📊 Voir le Notebook
             </a>
           </Button>
-          <Button variant="secondary" asChild className="">
+          <Button variant="secondary" asChild>
             <a href="#" target="_blank">
-              📝 Lire le Rapport
+              🗘️ Lire le Rapport
             </a>
           </Button>
         </div>
@@ -86,14 +79,14 @@ export default function ProjectGallery() {
         </Card>
 
         <div className="flex gap-4 mb-6">
-          <Button asChild  className=" ">
+          <Button asChild>
             <a href="#" target="_blank">
               📊 Voir le Notebook
             </a>
           </Button>
-          <Button variant="secondary" asChild  className="">
+          <Button variant="secondary" asChild>
             <a href="#" target="_blank">
-              📝 Lire le Rapport
+              🗘️ Lire le Rapport
             </a>
           </Button>
         </div>
@@ -115,13 +108,13 @@ export default function ProjectGallery() {
         </p>
 
         <div className="flex justify-center gap-4 mb-4">
-          <Button asChild  className="">
+          <Button asChild>
             <a href="mailto:mon.email@example.com">📧 Me Contacter</a>
           </Button>
-          <Button variant="secondary" asChild  className="">
+          <Button variant="secondary" asChild>
             <a href="/mon-cv.pdf" target="_blank">📄 Voir mon CV</a>
           </Button>
-          <Button variant="outline" asChild  className="">
+          <Button variant="outline" asChild>
             <a href="/mon-portfolio.pdf" target="_blank">
               <Download className="mr-2" /> Télécharger le Portfolio (PDF)
             </a>
@@ -130,36 +123,33 @@ export default function ProjectGallery() {
 
         {/* Liens réseaux */}
         <div className="flex justify-center gap-8 mt-4">
-        
-          <MotionLink
-          href="https://github.com/mon-github"
-          target="_blank"
-          className="flex flex-col items-center text-muted-foreground hover:text-black"
-          whileHover={{ scale: 1.2 }}
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            href="https://github.com/mon-github"
+            target="_blank"
+            className="flex flex-col items-center text-muted-foreground hover:text-black"
           >
-          <Github size={40} />
-          <span className="mt-1">GitHub</span>
-          </MotionLink>
-          <MotionLink
+            <Github size={40} />
+            <span className="mt-1">GitHub</span>
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2 }}
             href="https://www.linkedin.com/in/mon-linkedin"
             target="_blank"
             className="flex flex-col items-center text-muted-foreground hover:text-blue-700"
-            whileHover={{ scale: 1.2 }}
-            >
+          >
             <Linkedin size={40} />
-                    <span className="mt-1">LinkedIn</span>
-          </MotionLink>
+            <span className="mt-1">LinkedIn</span>
+          </motion.a>
         </div>
 
         {/* Compétences */}
         <h2 className="text-3xl font-bold mt-12 mb-4">Compétences</h2>
-        
-
         <MotionDiv
-        className="flex flex-wrap justify-center gap-3"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
+          className="flex flex-wrap justify-center gap-3"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
         >
           <Badge className="bg-green-100 text-green-800">Python</Badge>
           <Badge className="bg-green-100 text-green-800">Pandas</Badge>
