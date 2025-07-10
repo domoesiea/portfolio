@@ -11,13 +11,13 @@ export default function ProjectGallery() {
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
         <h1 className="text-2xl font-bold mb-2">Prédiction des ventes (2024)</h1>
         <p className="text-muted-foreground mb-4">
-        I actively contributed to the design and deployment of Medica, an internal generative AI assistant aimed at helping healthcare professionals summarize patient consultations. My work included benchmarking open-source LLMs (LLaMA 3, Mistral, Zephyr), designing RAG pipelines, and implementing secure and monitored deployment strategies using MLOps best practices.        </p>
+        I actively contributed to the design and deployment of Medica, an internal generative AI assistant aimed at helping healthcare professionals summarize patient consultations. My work included benchmarking  <strong>open-source LLMs</strong>  (LLaMA 3, Mistral, Zephyr), designing RAG pipelines, and implementing secure and monitored deployment strategies using MLOps best practices.        </p>
 
         <div className="flex flex-wrap gap-2 mb-4">
-          <Badge className="bg-blue-100 text-blue-800">Python</Badge>
-          <Badge className="bg-blue-100 text-blue-800">scikit-learn</Badge>
-          <Badge className="bg-blue-100 text-blue-800">Pandas</Badge>
-          <Badge className="bg-blue-100 text-blue-800">Jupyter</Badge>
+          <Badge className="bg-blue-100 text-blue-800"> State of the art analysis of LLMs for summarization in healthcare </Badge>
+          <Badge className="bg-blue-100 text-blue-800">Developed a LangChain/RAG-based architecture using vector databases and custom prompts to contextualize medical data.</Badge>
+          <Badge className="bg-blue-100 text-blue-800">Implemented API authentication (token-based) and Kubernetes RBAC policies for secure LLM deployment.</Badge>
+          <Badge className="bg-blue-100 text-blue-800"> Deployed the LLM-based chatbot with Docker, GitLab CI/CD pipelines, Kubernetes, and Argo Workflows.</Badge>
         </div>
 
         <Card className="mb-4">
